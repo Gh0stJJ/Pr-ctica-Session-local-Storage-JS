@@ -45,7 +45,7 @@ function init() {
                     <div class="alert alert-warning" role="alert">
                         No contacts found in <strong>session storage</strong>
                         <a href="./addContact.html" class="alert-link
-                        "> Add a new contact for this seccion</a>
+                        "> Add a new contact for this session</a>
                     </div>
                 </div>
         `
