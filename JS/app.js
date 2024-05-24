@@ -1,5 +1,6 @@
 /*
     Home Page script
+    @Author: Juanja V
 
 */
 
@@ -94,6 +95,10 @@ function display_usersLS(user_data) {
     );
 }
 
+/**
+ * Display the users in the session storage
+ * @param {JSON} user_data 
+ */
 function display_usersSS(user_data) {
     sessionSection.innerHTML = "";
     sessionSection.innerHTML = `
@@ -127,11 +132,18 @@ function display_usersSS(user_data) {
     );
 }
 
+/**
+ * Delete a user from the local storage
+ * @param {int} index 
+ */
 function delete_user_Local(index) {
     delete_user_LS(index);
     init();
 }
-
+/**
+ * Delete a user from the session storage
+ * @param {int} index 
+ */
 function delete_user_Session(index) {
     delete_user_SS(index);
     init();

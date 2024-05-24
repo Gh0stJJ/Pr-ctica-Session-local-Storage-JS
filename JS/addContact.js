@@ -9,7 +9,9 @@ var inputName;
 var inputNumber;
 
 // Functions
-
+/**
+ * Initialize the page
+ */
 function init(){
     addBtn = document.getElementById("addBtn");
     inputName = document.getElementById("name");
@@ -28,6 +30,11 @@ function init(){
     }
 }
 
+
+/**
+ * Add a new person to the list
+ 
+ */
 function addPerson(){
     var name = inputName.value;
     var number = inputNumber.value;
@@ -47,7 +54,9 @@ function addPerson(){
     
 }
 
-
+/**
+ * Set the JSON object with the user info in the local storage or session storage
+ */
 //Set data coming from the url
 function set_data(){
     var url = new URL(window.location.href);
@@ -68,6 +77,9 @@ function set_data(){
 }
 
 //Edit the user data
+/**
+ * Edit a person from the list
+ */
 function editPerson(){
     var url = new URL(window.location.href);
     var index = url.searchParams.get("index");
