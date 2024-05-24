@@ -7,7 +7,9 @@ var contactsRow;
 var localSection;
 var sessionSection;
 
-
+/**
+ * Initialize the page
+ */
 function init() {
     //Get the users data from the local storage
     var user_dataLS = get_user_data_LS();
@@ -55,6 +57,10 @@ function init() {
 
 }
 
+/**
+ * Display the users in the local storage
+ * @param {JSON} user_data 
+ */
 function display_usersLS(user_data) {
     localSection.innerHTML = "";
     localSection.innerHTML = `
