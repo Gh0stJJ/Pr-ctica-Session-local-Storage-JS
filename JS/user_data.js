@@ -14,6 +14,27 @@ function get_user_data_LS(){
 }
 
 /**
+ * 
+ * @param {int} index 
+ * @returns JSON object with the user info
+ */
+function get_user_by_index_LS(index){
+    var user_data = get_user_data_LS();
+    return user_data[index];
+}
+
+
+/**
+ * 
+ * @param {int} index 
+ * @returns JSON object with the user info
+ */
+function get_user_by_index_SS(index){
+    var user_data = get_user_data_SS();
+    return user_data[index];
+}
+
+/**
  * Set the JSON object with the user info in the local storage
  * @param {JSON} persona 
  */
@@ -106,3 +127,9 @@ function update_user_SS(index, persona){
     sessionStorage.setItem("user_data", JSON.stringify(user_data));
 }
 
+
+// initialize the user_data key in the local storage
+init_user_data();
+
+// initialize the user_data key in the session storage
+init_user_data_SS();
